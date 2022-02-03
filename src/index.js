@@ -14,7 +14,7 @@ const createImageNode = () => {
     const imagen = document.createElement("img"); 
     imagen.className = "mx-auto";
     imagen.width = "320";
-    imagen.src =`https://source.unsplash.com/random/${random()}`; 
+    imagen.dataset.src =`https://source.unsplash.com/random/${random()}`; 
 
     container.appendChild(imagen);
     return container;
@@ -32,7 +32,7 @@ const addImage = () => {
     mountNode.append(newImage);
     registerImage(newImage);
 };
- 
+
 addButton.addEventListener("click", addImage);
 
 
